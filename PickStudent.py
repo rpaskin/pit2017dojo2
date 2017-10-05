@@ -17,7 +17,7 @@ class PickStudent:
 
 	def pick_one(self, list):
 		'''escolhe um aluno aleatorio, exceto dos já escolhidos,
-		e dá um erro caso não existam mais alunos disponíveis'''
+		dando um erro caso não existam mais alunos disponíveis'''
 
 
 '''Abaixo está o código para utilizar essa classe e escolher um aluno por vez'''
