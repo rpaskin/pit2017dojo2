@@ -3,17 +3,27 @@ import csv
 from pprint import pprint
 
 class PickStudent:
-	already_picked = []	
+	#already_picked = []	
+
+	def __init__(self):
+		self.students = []
+		self.already_picked = []
 
 	def reset(self):
 		'''comeca a pegar alunos do zero'''
 		self.already_picked = []
 
 	def get_students(self, file):
-		self.already_picked = list(range(21))
-		self.already_picked.append(['1', 'Alice Brenner'])
-		self.already_picked.append(['11','Luis Fernando'])
-		return self.already_picked
+		arquivo = open(file, "r")
+		reader = csv.reader(arquivo)
+		for row in reader:
+			self.students.append(row)
+			print(row)
+		print(self.students)
+		#self.already_picked = list(range(21))
+		#self.already_picked.append(['1', 'Alice Brenner'])
+		#self.already_picked.append(['11','Luis Fernando'])
+		#return self.already_picked
 		'''Retorna uma lista de alunos'''
 
 	def pick_random(self, list):
