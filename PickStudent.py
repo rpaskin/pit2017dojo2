@@ -3,9 +3,7 @@ import csv
 from pprint import pprint
 
 class PickStudent:
-	already_picked = []
-
-	
+	already_picked = []	
 
 	def reset(self):
 		'''comeca a pegar alunos do zero'''
@@ -13,7 +11,8 @@ class PickStudent:
 
 	def get_students(self, file):
 		for i in range(23):
-			self.already_picked.append(i) 
+			self.already_picked.append(i)
+		return self.already_picked
 		'''Retorna uma lista de alunos'''
 
 	def pick_random(self, list):
