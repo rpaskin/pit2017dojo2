@@ -48,10 +48,3 @@ class TestPickStudent(TestCase):
 		for i in range(len(self.students)):
 			pick = self.ps.pick_one(self.students)
 		self.assertRaises(IndexError, self.ps.pick_one, self.students)
-
-'''
-	"""docstring for TestPickStudent"""
-	def __init__(self, arg):
-		super(TestPickStudent, self).__init__()
-		self.arg = arg
-'''

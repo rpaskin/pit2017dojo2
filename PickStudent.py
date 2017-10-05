@@ -6,39 +6,21 @@ class PickStudent:
 	already_picked = []
 
 	def reset(self):
+		'''comeca a pegar alunos do zero'''
 		self.already_picked = []
 
 	def get_students(self, file):
-		'''
-		Veja https://docs.python.org/3/library/csv.html
-		'''
-		with open(file, newline='') as csvfile:
-				return list(csv.reader(csvfile))
+		'''Retorna uma lista de alunos'''
 
 	def pick_random(self, list):
-		which = randrange(len(list))
-		pick = list[which]
-		return pick
+		'''escolhe um aluno aleatoriamente'''
 
 	def pick_one(self, list):
-		# pprint(self.already_picked)
-		pick = self.pick_random(list)
-		max_tries = len(list)*100	# prevents running forever; unlikely but it could happen since it's random
-		while pick in self.already_picked and max_tries > 0:
-			# pprint(f"Ops! Already picked {pick}")
-			pick = self.pick_random(list)
-			max_tries -= 1
-
-		if max_tries > 0:
-			# pprint(f"Aha! Picked {pick}")
-			self.already_picked.append(pick)
-			return pick
-		else:
-			raise IndexError
+		'''escolhe um aluno aleatorio, exceto dos já escolhidos,
+		e dá um erro caso não existam mais alunos disponíveis'''
 
 
-
-
+'''Abaixo está o código para utilizar essa classe e escolher um aluno por vez'''
 if __name__ == '__main__':
 	ps = PickStudent()
 	alunos = ps.get_students('./alunos.csv')
