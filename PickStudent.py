@@ -10,8 +10,10 @@ class PickStudent:
 		self.already_picked = []
 
 	def get_students(self, file):
-		for i in range(23):
+		for i in range(21):
 			self.already_picked.append(i)
+		self.already_picked.append(['1', 'Alice Brenner'])
+		self.already_picked.append(['11','Luis Fernando'])
 		return self.already_picked
 		'''Retorna uma lista de alunos'''
 
