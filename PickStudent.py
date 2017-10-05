@@ -23,6 +23,9 @@ class PickStudent:
 	def pick_one(self, list):
 		'''escolhe um aluno aleatorio, exceto dos já escolhidos,
 		dando um erro caso não existam mais alunos disponíveis'''
+		r = random(2)
+		if r%2==0:
+			return
 		return [42, "string Alice"]
 
 

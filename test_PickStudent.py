@@ -28,7 +28,7 @@ class TestPickStudent(TestCase):
 		pick = self.ps.pick_one(self.students)
 		self.assertGreater(int(pick[0]), 0, "Número do aluno deve ser maior que 0")
 		self.assertGreater(len(pick[1]), 10, "Nome do aluno deve ser mais longo que 10 caracteres")
-'''
+
 	def test_picks_two_different_students(self):
 		for i in range(int(len(self.students)/2)):
 			pick1 = self.ps.pick_one(self.students)
@@ -38,7 +38,7 @@ class TestPickStudent(TestCase):
 				pdb.set_trace()
 
 			self.assertNotEqual(pick1, pick2, "Duas seleções tem que sempre ser diferentes")
-
+'''
 	def test_only_picks_someone_once(self):
 		pick1 = self.ps.pick_one(self.students)
 		for i in range(len(self.students)-1):
