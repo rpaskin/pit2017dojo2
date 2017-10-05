@@ -5,14 +5,15 @@ from pprint import pprint
 class PickStudent:
 	already_picked = []
 
-	for i in range(23):
-		already_picked.append(i) 
+	
 
 	def reset(self):
 		'''comeca a pegar alunos do zero'''
 		self.already_picked = []
 
 	def get_students(self, file):
+		for i in range(23):
+			self.already_picked.append(i) 
 		'''Retorna uma lista de alunos'''
 
 	def pick_random(self, list):
