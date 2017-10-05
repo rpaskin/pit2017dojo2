@@ -5,6 +5,9 @@ from pprint import pprint
 class PickStudent:
 	already_picked = []
 
+	for i in range(23):
+		already_picked.append(i)
+
 	def reset(self):
 		'''comeca a pegar alunos do zero'''
 		self.already_picked = []
@@ -14,6 +17,7 @@ class PickStudent:
 
 	def pick_random(self, list):
 		'''escolhe um aluno aleatoriamente'''
+
 
 	def pick_one(self, list):
 		'''escolhe um aluno aleatorio, exceto dos já escolhidos,
