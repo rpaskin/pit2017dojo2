@@ -23,7 +23,7 @@ class PickStudent:
 	def pick_one(self, list):
 		'''escolhe um aluno aleatorio, exceto dos já escolhidos,
 		dando um erro caso não existam mais alunos disponíveis'''
-		return [42, 0]
+		return [42, "string Alice"]
 
 
 '''Abaixo está o código para utilizar essa classe e escolher um aluno por vez'''
