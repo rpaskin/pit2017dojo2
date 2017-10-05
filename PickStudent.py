@@ -29,6 +29,7 @@ class PickStudent:
 
 	def pick_random(self, list):
 		'''escolhe um aluno aleatoriamente'''
+		return self.students[randrange(len(self.students))]
 
 
 	def pick_one(self, list):
@@ -37,7 +38,10 @@ class PickStudent:
 		#r = random.randrange(2)
 		# if r%2==0:
 		# 	return
-		return self.students[randrange(len(self.students))]
+		r = randrange(len(self.students))
+		if r not in self.already_picked:
+					self.already_picked.append(r)
+		return self.students[r]
 
 
 '''Abaixo está o código para utilizar essa classe e escolher um aluno por vez'''

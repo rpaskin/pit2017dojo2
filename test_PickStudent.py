@@ -38,7 +38,7 @@ class TestPickStudent(TestCase):
 				pdb.set_trace()
 
 			self.assertNotEqual(pick1, pick2, "Duas seleções tem que sempre ser diferentes")
-'''
+
 	def test_only_picks_someone_once(self):
 		pick1 = self.ps.pick_one(self.students)
 		for i in range(len(self.students)-1):
@@ -49,4 +49,3 @@ class TestPickStudent(TestCase):
 		for i in range(len(self.students)):
 			pick = self.ps.pick_one(self.students)
 		self.assertRaises(IndexError, self.ps.pick_one, self.students)
-'''
