@@ -10,7 +10,7 @@ class PickStudent:
 		self.already_picked = []
 
 	def get_students(self, file):
-		self.already_picked=list(range(21))
+		self.already_picked = list(range(21))
 		self.already_picked.append(['1', 'Alice Brenner'])
 		self.already_picked.append(['11','Luis Fernando'])
 		return self.already_picked
@@ -23,6 +23,7 @@ class PickStudent:
 	def pick_one(self, list):
 		'''escolhe um aluno aleatorio, exceto dos já escolhidos,
 		dando um erro caso não existam mais alunos disponíveis'''
+		return [42, 0]
 
 
 '''Abaixo está o código para utilizar essa classe e escolher um aluno por vez'''

@@ -19,16 +19,16 @@ class TestPickStudent(TestCase):
 		self.assertIn(['1', 'Alice Brenner'], self.students, "Alice tem que estar dentro")
 		self.assertIn(['11', 'Luis Fernando'], self.students, "Luis tem que estar dentro")
 
-	# def test_doesnt_have_students(self):
-	# 	self.assertNotIn(['22', 'Temer'], self.students, "Temer tem que estar fora")
-	# 	self.assertNotIn(['23', 'Lula'], self.students, "Lula tem que estar fora")
+	def test_doesnt_have_students(self):
+	 	self.assertNotIn(['22', 'Temer'], self.students, "Temer tem que estar fora")
+	 	self.assertNotIn(['23', 'Lula'], self.students, "Lula tem que estar fora")
 
-'''
+
 	def test_picks_one_student(self):
 		pick = self.ps.pick_one(self.students)
 		self.assertGreater(int(pick[0]), 0, "Número do aluno deve ser maior que 0")
 		self.assertGreater(len(pick[1]), 10, "Nome do aluno deve ser mais longo que 10 caracteres")
-
+'''
 	def test_picks_two_different_students(self):
 		for i in range(int(len(self.students)/2)):
 			pick1 = self.ps.pick_one(self.students)
