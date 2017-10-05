@@ -27,7 +27,7 @@ class TestPickStudent(TestCase):
 	def test_picks_one_student(self):
 		pick = self.ps.pick_one(self.students)
 		self.assertGreater(int(pick[0]), 0, "Número do aluno deve ser maior que 0")
-		self.assertGreater(len(pick[1]), 10, "Nome do aluno deve ser mais longo que 10 caracteres")
+		self.assertGreater(len(pick[1]), 4, "Nome do aluno deve ser mais longo que 4 caracteres")
 
 	def test_picks_two_different_students(self):
 		for i in range(int(len(self.students)/2)):

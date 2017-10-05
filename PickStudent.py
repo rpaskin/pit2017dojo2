@@ -20,6 +20,7 @@ class PickStudent:
 			self.students.append(row)
 			print(row)
 		print(self.students)
+		return(self.students)
 		#self.already_picked = list(range(21))
 		#self.already_picked.append(['1', 'Alice Brenner'])
 		#self.already_picked.append(['11','Luis Fernando'])
@@ -33,10 +34,10 @@ class PickStudent:
 	def pick_one(self, list):
 		'''escolhe um aluno aleatorio, exceto dos já escolhidos,
 		dando um erro caso não existam mais alunos disponíveis'''
-		r = random(2)
-		if r%2==0:
-			return
-		return [42, "string Alice"]
+		#r = random.randrange(2)
+		# if r%2==0:
+		# 	return
+		return self.students[randrange(len(self.students))]
 
 
 '''Abaixo está o código para utilizar essa classe e escolher um aluno por vez'''
