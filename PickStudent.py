@@ -6,7 +6,7 @@ class PickStudent:
 	already_picked = []
 
 	for i in range(23):
-		already_picked.append(i)
+		already_picked.append(i) 
 
 	def reset(self):
 		'''comeca a pegar alunos do zero'''
