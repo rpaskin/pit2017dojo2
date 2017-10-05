@@ -1,0 +1,4 @@
+*.db
+.coverage
+*pycache*
+*_CLASS
